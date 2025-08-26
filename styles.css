@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+.emergency-button {
+	padding: 8px 16px;
+	width: 50%;
+	border-radius: 8px;
+}
+.card {
+	background-color: white;
+}
