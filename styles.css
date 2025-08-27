@@ -14,57 +14,54 @@
 
 /* COPY BUTTON EFFECTS */
 .coppy-button {
-	background: #fff;
+	background: white;
+	color: rgb(113, 112, 112);
 	cursor: pointer;
 	transition: 0.1s;
 }
-
-@media (hover: hover) and (pointer: fine) {
+.coppy-button:active {
+	background: rgb(103, 103, 103);
+	color: #fff;
+}
+@media only screen and (min-width: 601px) {
 	.coppy-button:hover {
 		background: rgb(147, 147, 147);
 		color: #fff;
 	}
 }
 
-.coppy-button:active {
-	background: rgb(103, 103, 103);
-	color: #fff;
-}
-
 /* CALL BUTTON EFFECTS */
 .call-button {
 	background: #00a63e;
+	color: white;
 	cursor: pointer;
-	transition: 0.2s;
+	transition: 0.1s;
 }
-
-@media (hover: hover) and (pointer: fine) {
+.call-button:active {
+	background: rgb(103, 103, 103);
+	color: #fff;
+}
+@media only screen and (min-width: 601px) {
 	.call-button:hover {
 		background: rgb(147, 147, 147);
 		color: #fff;
 	}
 }
+/* CLEAR HISTORY BUTTON EFFECTSF */
 
-.call-button:active {
+.clear-history-button {
+	background: #00a63e;
+	color: white;
+	cursor: pointer;
+	transition: 0.1s;
+}
+.clear-history-button:active {
 	background: rgb(103, 103, 103);
 	color: #fff;
 }
-
-/* CLEAR HISTORY BUTTON EFFECTSF */
-.clear-history-button {
-	background: #00a63e;
-	cursor: pointer;
-	transition: 0.2s;
-}
-
-@media (hover: hover) and (pointer: fine) {
+@media only screen and (min-width: 601px) {
 	.clear-history-button:hover {
 		background: rgb(147, 147, 147);
 		color: #fff;
 	}
-}
-
-.clear-history-button:active {
-	background: rgb(103, 103, 103);
-	color: #fff;
 }
