@@ -11,3 +11,60 @@
 .history-card {
 	margin-bottom: 12px;
 }
+
+/* COPY BUTTON EFFECTS */
+.coppy-button {
+	background: #fff;
+	cursor: pointer;
+	transition: 0.1s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.coppy-button:hover {
+		background: rgb(147, 147, 147);
+		color: #fff;
+	}
+}
+
+.coppy-button:active {
+	background: rgb(103, 103, 103);
+	color: #fff;
+}
+
+/* CALL BUTTON EFFECTS */
+.call-button {
+	background: #00a63e;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.call-button:hover {
+		background: rgb(147, 147, 147);
+		color: #fff;
+	}
+}
+
+.call-button:active {
+	background: rgb(103, 103, 103);
+	color: #fff;
+}
+
+/* CLEAR HISTORY BUTTON EFFECTSF */
+.clear-history-button {
+	background: #00a63e;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+@media (hover: hover) and (pointer: fine) {
+	.clear-history-button:hover {
+		background: rgb(147, 147, 147);
+		color: #fff;
+	}
+}
+
+.clear-history-button:active {
+	background: rgb(103, 103, 103);
+	color: #fff;
+}
