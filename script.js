@@ -25,6 +25,11 @@ function copyCounterFeature() {
 	const newNumberOfCoppies = numberOfCoppies + 1;
 	document.getElementById("coppy-count").innerText = newNumberOfCoppies;
 }
+function copyOnclickFeature(numberId) {
+	const textToCopy = document.getElementById(numberId).innerText;
+	navigator.clipboard.writeText(textToCopy);
+}
+
 // CALL & COINS REDUCING FEATURE
 document.getElementById("call-one").addEventListener("click", function () {
 	callingFeature("service-one", "service-number-one");
@@ -116,32 +121,40 @@ document
 		heartCounterFeature();
 	});
 
-// copy button id: copy-one
-// copy count id: coppy-count
+// COPY ON CLICK FEATURE
 document.getElementById("copy-one").addEventListener("click", function () {
 	copyCounterFeature();
+	copyOnclickFeature("service-number-one");
 });
 document.getElementById("copy-two").addEventListener("click", function () {
 	copyCounterFeature();
+	copyOnclickFeature("service-number-two");
 });
 document.getElementById("copy-three").addEventListener("click", function () {
 	copyCounterFeature();
+	copyOnclickFeature("service-number-three");
 });
 document.getElementById("copy-four").addEventListener("click", function () {
 	copyCounterFeature();
+	copyOnclickFeature("service-number-four");
 });
 document.getElementById("copy-five").addEventListener("click", function () {
 	copyCounterFeature();
+	copyOnclickFeature("service-number-five");
 });
 document.getElementById("copy-six").addEventListener("click", function () {
 	copyCounterFeature();
+	copyOnclickFeature("service-number-six");
 });
 document.getElementById("copy-seven").addEventListener("click", function () {
 	copyCounterFeature();
+	copyOnclickFeature("service-number-seve ");
 });
 document.getElementById("copy-eight").addEventListener("click", function () {
 	copyCounterFeature();
+	copyOnclickFeature("service-number-eight");
 });
 document.getElementById("copy-nine").addEventListener("click", function () {
 	copyCounterFeature();
+	copyOnclickFeature("service-number-nine");
 });
