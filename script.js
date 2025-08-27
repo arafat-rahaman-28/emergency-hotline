@@ -11,6 +11,14 @@ function callingFeature(nameId, numberId) {
 		alert("Calling: " + serviceName + "\nNumber: " + serviceNumber);
 	}
 }
+function heartCounterFeature() {
+	const numberOfHearts = parseInt(
+		document.getElementById("heart-count").innerText
+	);
+	const newNumberOfHearts = numberOfHearts + 1;
+	document.getElementById("heart-count").innerText = newNumberOfHearts;
+}
+// CALL & COINS REDUCING FEATURE
 document.getElementById("call-one").addEventListener("click", function () {
 	callingFeature("service-one", "service-number-one");
 });
@@ -46,3 +54,57 @@ document.getElementById("call-eight").addEventListener("click", function () {
 document.getElementById("call-nine").addEventListener("click", function () {
 	callingFeature("service-nine", "service-number-nine");
 });
+
+// HEART INCREAMENT FEATURE
+document
+	.getElementById("heart-icon-one")
+	.addEventListener("click", function () {
+		heartCounterFeature();
+	});
+document
+	.getElementById("heart-icon-two")
+	.addEventListener("click", function () {
+		heartCounterFeature();
+	});
+
+document
+	.getElementById("heart-icon-three")
+	.addEventListener("click", function () {
+		heartCounterFeature();
+	});
+
+document
+	.getElementById("heart-icon-four")
+	.addEventListener("click", function () {
+		heartCounterFeature();
+	});
+
+document
+	.getElementById("heart-icon-five")
+	.addEventListener("click", function () {
+		heartCounterFeature();
+	});
+
+document
+	.getElementById("heart-icon-six")
+	.addEventListener("click", function () {
+		heartCounterFeature();
+	});
+
+document
+	.getElementById("heart-icon-seven")
+	.addEventListener("click", function () {
+		heartCounterFeature();
+	});
+
+document
+	.getElementById("heart-icon-eight")
+	.addEventListener("click", function () {
+		heartCounterFeature();
+	});
+
+document
+	.getElementById("heart-icon-nine")
+	.addEventListener("click", function () {
+		heartCounterFeature();
+	});
