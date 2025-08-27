@@ -1,3 +1,4 @@
+const callData = [];
 // REUSABLE FUNCTIONS
 function callingFeature(nameId, numberId) {
 	const numberofCoins = parseInt(document.getElementById("coins").innerText);
@@ -29,42 +30,83 @@ function copyOnclickFeature(numberId) {
 	const textToCopy = document.getElementById(numberId).innerText;
 	navigator.clipboard.writeText(textToCopy);
 }
+function historyGenerator(nameID, numberID) {
+	const serviceName = document.getElementById(nameID).innerText;
+	const serviceNumber = document.getElementById(numberID).innerText;
+	const data = {
+		name: serviceName,
+		number: serviceNumber,
+		time: new Date().toLocaleTimeString(),
+	};
+	callData.push(data);
+	console.log(callData);
+	const historyContainer = document.getElementById("history-card-container");
+	historyContainer.innerText = "";
+	for (const data of callData) {
+		const div = document.createElement("div");
+		div.innerHTML = `
+			<div
+								class="history-card flex justify-between items-center p-2 rounded-[8px] bg-[#f6f6f6]"
+							>
+								<div class="history-card-left w-[190px]">
+									<p class="font-bold text-[16px]">${data.name}</p>
+									<p class="text-gray-500 font-semibold">
+										${data.number}
+									</p>
+								</div>
+								<div class="history-card-right">
+									<p class="text-[14px]">${data.time}</p>
+								</div>
+							</div>
+		`;
+		historyContainer.prepend(div);
+	}
+}
 
 // CALL & COINS REDUCING FEATURE
 document.getElementById("call-one").addEventListener("click", function () {
 	callingFeature("service-one", "service-number-one");
+	historyGenerator("service-one", "service-number-one");
 });
 
 document.getElementById("call-two").addEventListener("click", function () {
 	callingFeature("service-two", "service-number-two");
+	historyGenerator("service-two", "service-number-two");
 });
 
 document.getElementById("call-three").addEventListener("click", function () {
 	callingFeature("service-three", "service-number-three");
+	historyGenerator("service-three", "service-number-three");
 });
 
 document.getElementById("call-four").addEventListener("click", function () {
 	callingFeature("service-four", "service-number-four");
+	historyGenerator("service-four", "service-number-four");
 });
 
 document.getElementById("call-five").addEventListener("click", function () {
 	callingFeature("service-five", "service-number-five");
+	historyGenerator("service-five", "service-number-five");
 });
 
 document.getElementById("call-six").addEventListener("click", function () {
 	callingFeature("service-six", "service-number-six");
+	historyGenerator("service-six", "service-number-six");
 });
 
 document.getElementById("call-seven").addEventListener("click", function () {
 	callingFeature("service-seven", "service-number-seven");
+	historyGenerator("service-seven", "service-number-seven");
 });
 
 document.getElementById("call-eight").addEventListener("click", function () {
 	callingFeature("service-eight", "service-number-eight");
+	historyGenerator("service-eight", "service-number-eight");
 });
 
 document.getElementById("call-nine").addEventListener("click", function () {
 	callingFeature("service-nine", "service-number-nine");
+	historyGenerator("service-nine", "service-number-nine");
 });
 
 // HEART INCREAMENT FEATURE
@@ -157,4 +199,10 @@ document.getElementById("copy-eight").addEventListener("click", function () {
 document.getElementById("copy-nine").addEventListener("click", function () {
 	copyCounterFeature();
 	copyOnclickFeature("service-number-nine");
+});
+
+// CLEAR HISTORY BUTTON
+document.getElementById("clear-btn").addEventListener("click", function () {
+	const historyContainer = document.getElementById("history-card-container");
+	historyContainer.innerHTML = "";
 });
