@@ -61,6 +61,7 @@ function copyCounterFeature() {
 function copyOnclickFeature(numberId) {
 	const textToCopy = document.getElementById(numberId).innerText;
 	navigator.clipboard.writeText(textToCopy);
+	alert(`${textToCopy} is copied successfully ✅`);
 }
 
 // CALL & COINS REDUCING FEATURE
