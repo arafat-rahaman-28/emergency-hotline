@@ -181,7 +181,7 @@ document.getElementById("copy-six").addEventListener("click", function () {
 });
 document.getElementById("copy-seven").addEventListener("click", function () {
 	copyCounterFeature();
-	copyOnclickFeature("service-number-seve ");
+	copyOnclickFeature("service-number-seven");
 });
 document.getElementById("copy-eight").addEventListener("click", function () {
 	copyCounterFeature();
